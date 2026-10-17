@@ -1,0 +1,12 @@
+HBL loader (64-bit) used as the Program ExeFS of the -forwarder.nsp.
+
+Built from sphaira's stock loader source (ITotalJustice/sphaira, hbl/):
+    source/main.c, source/trampoline.s   (+ hbl/nx-hbloader.LICENSE.md)
+with the machine's native devkitA64 (aarch64-none-elf-gcc 16.1.0):
+    aarch64-none-elf-gcc -march=armv8-a+crc+crypto -mtune=cortex-a57 -mtp=soft \
+      -fPIE -O2 -D__SWITCH__ -DVERSION='"3.0.0"' -I $DEVKITPRO/libnx/include \
+      -c main.c ; -c trampoline.s
+    aarch64-none-elf-gcc -specs=$DEVKITPRO/libnx/switch.specs -Wl,-wrap,exit \
+      -o hbl.elf main.o trampoline.o -L $DEVKITPRO/libnx/lib -lnx
+    elf2nso hbl.elf hbl.nso
+SHA256(hbl.nso) = 3f8a461b2b1eeb82d4d25dbb874b18a6dda7f9a78085023060bde431330a00c9

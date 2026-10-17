@@ -1,0 +1,63 @@
+FIFA 14 - Nintendo Switch
+=========================
+
+Port no oficial. NO incluye el juego: usa tu propia copia
+(APK 1.3.6 + OBB).
+
+INSTALACION
+-----------
+1. Descomprime "switch/" en la raiz de la microSD.  Queda:
+       switch/fifa14/
+
+2. Copia tu juego dentro de esa carpeta:
+       FIFA14.apk                                -> switch/fifa14/
+       main.136.com.ea.game.fifa14_row.obb       -> switch/fifa14/obb/
+
+3. Instala con Sphaira o DBI el NSP directo:
+       switch/fifa14/instalador/fifa14-direct.nsp
+   (NSP directo. No uses "Install Forwarder".)
+
+4. Abre el juego desde el HOME. El primer arranque descomprime
+   las librerias del APK y tarda un poco.
+
+
+COMENTARIOS
+-----------
+El motor busca el habla en estos nombres, dentro de:
+       switch/fifa14/external/Speech/
+           hdr_ENG_US.big
+           sth_ENG_US.big
+           dat_ENG_US.bh
+           pbp_ENG_US.evt
+
+Si tienes un pack con ese formato, copialo ahi. En config.ini pon:
+       [audio]
+       language = ENG_US
+       force_speech = 1
+Si no tienes pack, deja "language = keep".
+
+
+ACERCA DE
+---------
+Tu texto esta en:
+       switch/fifa14/external/data/cmn/fe/about_ES.txt
+La pantalla muestra ese fichero. Si lo cambias, se ve al volver a entrar.
+
+
+AJUSTES
+-------
+config.ini (se crea solo en el primer arranque):
+       [controls]
+       pad_keys_scope = match        (las teclas del pad, solo en el partido)
+       pad_touch_buttons = on        (el pad pulsa los botones tactiles)
+       pad_touch_map = "a:0,b:1,x:2,y:3"
+
+LOG
+---
+Si algo va mal, en la raiz de la SD:
+       switch/fifa14/log.txt
+       switch/fifa14/crash.log
+
+
+Proyecto no oficial, sin relacion con EA. El juego no se incluye.
+github.com/lozp1/f14

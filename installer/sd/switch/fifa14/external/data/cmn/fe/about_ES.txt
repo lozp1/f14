@@ -1,0 +1,9 @@
+FIFA 14 - Nintendo Switch
+Port no oficial para consola con homebrew.
+No incluye el juego: usa tu propia copia (APK + OBB).
+
+Autor:      Franco Lopez (FZ) - f.paolo
+Repositorio: github.com/lozp1/f14
+
+Runtime:    android32 (AArch32) + FEXTendo / Autorun
+Version:    1.0
