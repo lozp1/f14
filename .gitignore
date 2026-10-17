@@ -1,0 +1,52 @@
+# The android32 runtime (a symlink in development, a submodule on GitHub)
+/runtime
+# mesa32's lib/ + include/, linked in during the build
+/portlibs32
+# build output
+/build
+/*.elf
+/*.nsp
+/*.nso
+/*.npdm
+/*.build
+# the launcher's build
+/launcher/build
+/launcher/*.elf
+/launcher/*.nro
+
+# logs y resultados de las rondas (no se publican)
+*.log
+*.exit.txt
+*.out
+*.json
+*.diff
+*.bak
+icon.jpg.placeholder.bak
+
+# NSPs ya generados por el instalador
+/installer/fifa14_nx-forwarder.nsp
+/installer/fifa14_nx-installer.nsp
+/installer/fifa14-direct.nsp
+/installer/direct
+/installer/forwarder
+/installer/self
+/installer/hbl.nso
+
+# libnx32 (dependencia de build)
+/libnx32
+
+# payload que el lanzador incrusta
+/launcher/romfs/*.nsp
+/launcher/romfs/*.build
+
+# binarios generados por el instalador
+/installer/.local-atmo
+*-exit.txt
+
+# notas internas (no se publican)
+NOTAS-*.md
+NOTES.md
+installer/INSTALADOR.md
+
+# paquetes publicados (van en Releases)
+/dist
